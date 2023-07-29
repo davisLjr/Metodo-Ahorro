@@ -3,6 +3,7 @@
 
 import React, { useEffect } from 'react';
 import netlifyIdentity from 'netlify-identity-widget';
+import { Button, Heading } from '@chakra-ui/react'
 
 const LoginPage = () => {
   useEffect(() => {
@@ -20,8 +21,8 @@ const LoginPage = () => {
 
   return (
     <div>
-      <h1>Página de inicio de sesión</h1>
-      <button onClick={handleLogin}>Iniciar sesión con Netlify</button>
+      <Heading>Página de inicio de sesión</Heading>
+      <Button onClick={handleLogin}>Iniciar sesión con Netlify</Button>
     </div>
   );
 };
