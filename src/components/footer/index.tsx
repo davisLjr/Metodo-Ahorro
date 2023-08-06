@@ -1,5 +1,4 @@
 import React from "react";
-import "boxicons";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
 const Footer = () => {

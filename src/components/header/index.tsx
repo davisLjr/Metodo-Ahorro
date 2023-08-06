@@ -1,5 +1,4 @@
 import React from "react";
-import "boxicons";
 import {
   Box,
   Button,
@@ -10,6 +9,7 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
+  Image,
   Input,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -41,7 +41,7 @@ const Header = () => {
           background: "transparent",
         }}
       >
-        <box-icon name="grid-alt" type="solid" color="#ffffff"></box-icon>
+        <Image src="/layout/grid.png" w="18px" alt="Icono de cuadrícula" />
       </Button>
       <Drawer
         isOpen={isOpen}
