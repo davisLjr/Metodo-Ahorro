@@ -3,21 +3,20 @@
 
 import React, { useEffect } from 'react';
 import netlifyIdentity from 'netlify-identity-widget';
-import { Button, Heading } from '@chakra-ui/react'
+import { Button, Heading } from '@chakra-ui/react';
 import Hero from './component/hero';
 
 const LoginPage = () => {
   useEffect(() => {
-    // Verificar si estamos en el lado del cliente antes de usar netlifyIdentity
     if (process.browser) {
-      // Configurar la biblioteca netlify-identity-widget
       netlifyIdentity.init();
     }
   }, []);
 
   const handleLogin = () => {
-    // Abrir el widget de inicio de sesión
-    netlifyIdentity.open();
+    if (process.browser) {
+      netlifyIdentity.open();
+    }
   };
 
   return (
