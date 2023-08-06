@@ -16,7 +16,7 @@ import {
 import NextLink from "next/link";
 import { Link } from "@chakra-ui/react";
 
-const DrawerExample = () => {
+const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef<HTMLButtonElement | null>(null); // Corregido el tipo de referencia
 
@@ -32,7 +32,15 @@ const DrawerExample = () => {
       textAlign="center"
       p="20px 0"
     >
-      <Button ref={btnRef} onClick={onOpen} background="transparent">
+      <Button 
+        ref={btnRef} 
+        onClick={onOpen} 
+        background="transparent"
+        title="menu"
+        _hover={{
+          background:"transparent"
+        }}
+      >
         <box-icon name="grid-alt" type="solid" color="#ffffff"></box-icon>
       </Button>
       <Drawer
@@ -44,7 +52,7 @@ const DrawerExample = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Drawer</DrawerHeader>
+          <DrawerHeader>Metodo Ahorro</DrawerHeader>
 
           <DrawerBody display="flex" flexDirection="column" gap="1rem">
             <Link as={NextLink} href="/home">
@@ -75,4 +83,4 @@ const DrawerExample = () => {
     </Box>
   );
 };
-export default DrawerExample;
+export default Header;
