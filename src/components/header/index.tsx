@@ -18,7 +18,7 @@ import { Link } from "@chakra-ui/react";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef<HTMLButtonElement | null>(null); // Corregido el tipo de referencia
+  const btnRef = React.useRef<HTMLButtonElement | null>(null);
 
   return (
     <Box
@@ -32,13 +32,13 @@ const Header = () => {
       textAlign="center"
       p="20px 0"
     >
-      <Button 
-        ref={btnRef} 
-        onClick={onOpen} 
+      <Button
+        ref={btnRef}
+        onClick={onOpen}
         background="transparent"
         title="menu"
         _hover={{
-          background:"transparent"
+          background: "transparent",
         }}
       >
         <box-icon name="grid-alt" type="solid" color="#ffffff"></box-icon>

@@ -1,16 +1,12 @@
 // app/providers.tsx
-'use client'
+"use client";
 
-import Footer from '@/components/footer'
-import Header from '@/components/header'
-import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider, Box } from '@chakra-ui/react'
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import { CacheProvider } from "@chakra-ui/next-js";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 
-export function Providers({ 
-    children 
-  }: { 
-  children: React.ReactNode 
-  }) {
+export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <CacheProvider>
       <ChakraProvider>
@@ -21,5 +17,5 @@ export function Providers({
         </Box>
       </ChakraProvider>
     </CacheProvider>
-  )
+  );
 }
