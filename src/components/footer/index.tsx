@@ -21,7 +21,7 @@ const Footer = () => {
       <Box
         w={{ base: "100%", md: "50%" }}
         h="100%"
-        borderLeft={{ base: "none", md: "1px solid black" }}
+        borderLeft="1px solid black"
         borderBottom={{ base: "2px solid black", md: "none" }}
         p="25px 0"
       >
